@@ -1,0 +1,3 @@
+﻿  L4N5.cpp
+D:\User\unic\PP\PpOvs\L4N5\L4N5\L4N5.cpp(22,25): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+  L4N5.vcxproj -> D:\User\unic\PP\PpOvs\L4N5\x64\Debug\L4N5.exe

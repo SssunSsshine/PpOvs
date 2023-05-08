@@ -1,0 +1,10 @@
+﻿  L2N7.cpp
+D:\User\unic\PP\PpOvs\L2N7\L2N7\L2N7.cpp(216,25): warning C4244: 'initializing': conversion from 'double' to 'size_t', possible loss of data
+D:\User\unic\PP\PpOvs\L2N7\L2N7\L2N7.cpp(217,24): warning C4244: 'initializing': conversion from 'double' to 'size_t', possible loss of data
+D:\User\unic\PP\PpOvs\L2N7\L2N7\L2N7.cpp(219,52): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+D:\User\unic\PP\PpOvs\L2N7\L2N7\L2N7.cpp(219,26): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+D:\User\unic\PP\PpOvs\L2N7\L2N7\L2N7.cpp(226,51): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+D:\User\unic\PP\PpOvs\L2N7\L2N7\L2N7.cpp(226,24): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+D:\User\unic\PP\PpOvs\L2N7\L2N7\L2N7.cpp(227,49): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+D:\User\unic\PP\PpOvs\L2N7\L2N7\L2N7.cpp(227,23): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+  L2N7.vcxproj -> D:\User\unic\PP\PpOvs\L2N7\x64\Debug\L2N7.exe
