@@ -21,6 +21,7 @@ using namespace std;
 const int m = 5;
 int TAG = 0;
 
+//проверка совпадения
 bool is_intersects(int  message[m], int  buffer[m])
 {
 	bool is_ident = false;
@@ -75,13 +76,14 @@ int main(int argc, char* argv[])
 		}
 	}
 
+	cout << myrank << " process: ";
 	for (int i = 0; i < procnum; i++) {
 		if (i != myrank) {
 			int buffer[m];
 			MPI_Recv(&buffer, m, MPI_INT, i, TAG, MPI_COMM_WORLD, &status);
 
 			if (is_intersects(message, buffer)) {
-				cout << i << "\n";
+				cout << i << " ";
 			}
 		}
 	}

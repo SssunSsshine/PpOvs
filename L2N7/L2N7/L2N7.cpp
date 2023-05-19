@@ -1,4 +1,3 @@
-
 #include  <mpi.h>
 #include <stdio.h>
 #include <iostream>
@@ -209,23 +208,25 @@ int main(int argc, char* argv[])
 		}
 	}
 
+	//широковещание, посылаем всем процессам эпсилон и n
 	MPI_Bcast(&eps, 1, MPI_DOUBLE, 0, MPI_COMM_WORLD);
 	MPI_Bcast(&n, 1, MPI_INT, 0, MPI_COMM_WORLD);
 
+	//вычисляем сколько данных посылается каждому из процессов
 	double k = ceil((double)n / (double)procnum);
 	localdata = new double[k];
 	reslocal = new double[k];
 
+	//раздача данных всем процессам (отправляем иксы)
 	MPI_Scatter(globaldata, k, MPI_DOUBLE, localdata, k, MPI_DOUBLE, 0, MPI_COMM_WORLD);
 
 	for (int j = 0; j < k; j++) {
 		reslocal[j] = epsilon_taylor(localdata[j], eps);
 	}
 
-
-	MPI_Gather(localdata, k, MPI_DOUBLE, globaldata, k, MPI_DOUBLE, 0, MPI_COMM_WORLD);
+	//собираем данные результирующие
 	MPI_Gather(reslocal, k, MPI_DOUBLE, resglobal, k, MPI_DOUBLE, 0, MPI_COMM_WORLD);
-
+	
 	if (myrank == 0) {
 		print_table(n, eps, globaldata, resglobal, res);
 	}
